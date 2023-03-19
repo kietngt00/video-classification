@@ -17,7 +17,7 @@ The experiment has data-preparation cells for both **Kinetics-400** and **MSR Da
 Implement the same ideas from **1.1**, but using a light-weight version of pre-trained [Encoder block](https://github.com/microsoft/Cream/tree/main/MiniViT/Mini-DeiT)
 The experiment has data-preparation cells for both **Kinetics-400** and **MSR DailyActivity3D**.
 
-### 1.3 ResNet & Temporal ViT
+### 1.3 ResNet & Temporal ViT - `resnet-vit.ipynb`
 In this experiment, in order to create a light-weight classifier, a pre-trained [ResNet-50](https://huggingface.co/microsoft/resnet-50) is used to extract spatial features, then a stack of Transformer Encoder blocks (**Temporal ViT**) is used to aggregate the temporal information from the extracted features. The loss is only backproped on the **Temporal ViT**.
 
 ## 2. Results & Discussion
