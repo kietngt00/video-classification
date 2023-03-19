@@ -28,6 +28,7 @@ Data processing (including normalization, affine augmentation) accounts for a la
 |         | ViViT | Mini-ViViT | ResNet & Temporal ViT |
 |---------|-------|------------|-----------------------|
 | Val Acc | 9.375% | 7.813%     | 50.0%                |
+
 The above table shows the best results of 20-epoch training for each experiment. 
 - It is clear to see that the third experiment (**1.3**) can achieve the best result because ResNet-50 can extract spatial effectively, while the loss is only backward on the Temporal ViT, which can avoid gradient vanishing problem. 
 - In contrast, loss of **ViViT** needs to be backprop through both spatial and temporal encoders, which may lead to weak gradient signal update. In addition, despite the fact that spatial encoder's weights are initialized from a pre-trained **ViT**, the temporal encoder has its weights initialized randomly, and as shown from the origin [ViT paper](https://arxiv.org/abs/2010.11929), ViT should be trained with a huge number of data to get good performance, while **MSR DailyActivity3D** has only 320 videos, and 80% of them are used for training. Moreover, training a large ViT requires a large batch size and many epochs, the experiment **1.1** is trained with a batch size of 8 and 20 epochs only due to the GPU memory and time-constrained of Colab. These three reasons are contributed to the low validation accuracy.
