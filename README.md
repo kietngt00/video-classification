@@ -14,7 +14,8 @@ Key implementations for this experiment:
 The experiment has data-preparation cells for both **Kinetics-400** and **MSR DailyActivity3D**.
 
 ### 1.2. Mini-ViViT - `ViViT_tiny.ipynb`
-Implement the same ideas from **1.1**, but using a light-weight version of pre-trained [Encoder block](https://github.com/microsoft/Cream/tree/main/MiniViT/Mini-DeiT)
+Implement the same ideas from **1.1**, but using a light-weight version of pre-trained [Encoder block](https://github.com/microsoft/Cream/tree/main/MiniViT/Mini-DeiT).
+
 The experiment has data-preparation cells for both **Kinetics-400** and **MSR DailyActivity3D**.
 
 ### 1.3 ResNet & Temporal ViT - `resnet-vit.ipynb`
